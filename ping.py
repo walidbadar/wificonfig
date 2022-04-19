@@ -11,8 +11,8 @@ while True:
         response = requests.get('https://www.google.com')
         if response.status_code == 200:
             GPIO.output(2, GPIO.HIGH)
-            print('Connected to Internet!')
+            # print('Connected to Internet!')
 
     except:
         GPIO.output(2, GPIO.LOW)
-        print('Not Connected to Internet.')
+        # print('Not Connected to Internet.')
