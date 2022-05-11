@@ -24,3 +24,15 @@ if __name__ == '__main__':
         loop()
     except:
         GPIO.cleanup()
+
+
+wifiSetting = open("wifibook-fr1-udp53.owifi", "r")
+replacement = ""
+for line in wifiSetting:
+    line = line.strip()
+    changes = line.replace("auth-user-pass", "auth-user-pass /etc/openwifi/password.txt")
+    replacement = replacement + changes + "\n"
+wifiSetting.close()
+wifiSetting = open("wifibook-fr1-udp53.owifi", "w")
+wifiSetting.write(replacement)
+wifiSetting.close()
