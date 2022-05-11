@@ -9,7 +9,7 @@ def setup():
 
 def reset_wifi(ev=None):
     wifiSetting = open("/etc/wpa_supplicant/wpa_supplicant-wlan0.conf", "w")
-    replacement = 'country=EC\nctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\nnetwork={\nssid="rpizero"\nmode=2\npsk="Neoappsadmin101"\n}'
+    replacement = 'country=EC\nctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\nnetwork={\nssid="Mina"\nmode=2\npsk="admin"\n}'
     wifiSetting.write(replacement)
     wifiSetting.close()
 
