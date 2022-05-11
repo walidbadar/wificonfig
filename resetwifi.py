@@ -12,6 +12,7 @@ def reset_wifi(ev=None):
     replacement = 'country=EC\nctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\nnetwork={\nssid="Mina"\nmode=2\npsk="admin"\n}'
     wifiSetting.write(replacement)
     wifiSetting.close()
+    subprocess.Popen(['shutdown','-r','now'])
 
 def loop():
     GPIO.add_event_detect(25, GPIO.FALLING, callback=reset_wifi, bouncetime=1000)
