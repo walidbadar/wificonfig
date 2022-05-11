@@ -1,1 +1,2 @@
-*/1 * * * * /home/pi/ping/ping.sh
+*/1 * * * * python3 /home/pi/wificonfig/ping.py
+*/1 * * * * python3 /home/pi/wificonfig/resetwifi.py
