@@ -1,4 +1,4 @@
-import requests
+import requests, time
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
@@ -16,3 +16,5 @@ while True:
     except:
         GPIO.output(2, GPIO.LOW)
         # print('Not Connected to Internet.')
+
+    time.sleep(10)
