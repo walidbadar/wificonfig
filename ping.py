@@ -8,7 +8,7 @@ GPIO.setup(2,GPIO.OUT, initial = GPIO.LOW)
 
 while True:
     try:
-        response = requests.get('https://www.google.com')
+        response = requests.get('https://www.github.com')
         if response.status_code == 200:
             GPIO.output(2, GPIO.HIGH)
             # print('Connected to Internet!')
