@@ -9,7 +9,7 @@ def setup():
 
 def reset_wifi(ev=None):
     wifiSetting = open("/etc/wpa_supplicant/wpa_supplicant-wlan0.conf", "w")
-    replacement = 'country=EC\nctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\nnetwork={\nssid="Mina"\nmode=2\npsk="admin1234"\n}'
+    replacement = 'country=EC\nctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\nnetwork={\nssid="Mina"\nmode=2\npsk="admin123"\n}'
     wifiSetting.write(replacement)
     wifiSetting.close()
     subprocess.Popen(['shutdown','-r','now'])
